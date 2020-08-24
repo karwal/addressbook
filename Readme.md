@@ -19,6 +19,8 @@ Project structure was generated using Spring Initializr. React has been used for
 11. Postman/Curl : testing Rest Services.
 12. React
 
+**Note** My primary skillset lies around backend services. Though I have done some frontend development using Google GWT and Adobe Flex in the past, but I am not upto date with modern front end technologies like React/Angular etc. The React used in this project is what I learned and applied in two days. I have created a front end for the sake com completeness.
+
 # Security Considerations / Assumptions:
 1. Full OAuth based authentication/authorization was not implemented as it was out of scope for this excercise.	
 2. REST services are secured using access token, which is hard coded for this application. But in a real world application it will be generated using OAuth etc.
@@ -41,6 +43,21 @@ Project structure was generated using Spring Initializr. React has been used for
 
 ``` java -jar ./target/addressbook-0.0.1-SNAPSHOT.jar```
 * Now application is started.
+
+* Front end is available at: http://localhost:8080/
+
+**Note** My primary skillset lies around backend services. Though I have done some frontend development using Google GWT and Adobe Flex in the past, but I am not upto date with modern front end technologies like React/Angular etc. The React used in this project is what I learned and applied in two days. I have created a front end for the sake com completeness.
+
+* Database is available at:
+
+http://localhost:8080/h2_console
+
+Username: sa
+
+Password: <empty>
+
+Database: ./h2/addressbookdb
+
 
 # Using application
 * Create few Address Book using any Rest client (I have used Postman/Curl)
@@ -86,10 +103,13 @@ curl -d '{"addressBookId" : "2", ""contactName": "Jagdeep3", "contactPhoneNumber
 curl  -H "Content-Type: application/json" -H  "Authorization: abc123"   -X GET http://localhost:8080/v1/api/pwc/contact?unique=true
 ```
 
-# Testing
+# Unit Testing
 JUnit coverage is provided for controller classes and interceptor class(AuthenticationInterceptor.java) only. 
 There is no JUnit coverage for repository class methods as repository is just an Inteface and implementation is provided by JPA.
 
+# References
+* https://www.kirupa.com/react/creating_single_page_app_react_using_react_router.htm
+* https://spring.io/guides/tutorials/react-and-spring-data-rest/
 
 
 ## Author
