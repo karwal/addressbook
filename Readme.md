@@ -65,9 +65,9 @@ This will create a folder addressbook in your current working directory.
 
 
 ```
-curl -d '{"name": "Outlook"}' -H "Content-Type: application/json" -X POST http://localhost:8080/v1/api/pwc/addressbook/create
-curl -d '{"name": "Google"}' -H "Content-Type: application/json" -X POST http://localhost:8080/v1/api/pwc/addressbook/create
-curl -d '{"name": "Yahoo"}' -H "Content-Type: application/json" -X POST http://localhost:8080/v1/api/pwc/addressbook/create
+curl -d '{"name": "Outlook"}' -H "Content-Type: application/json" -H  "Authorization: abc123" -X POST http://localhost:8080/v1/api/pwc/addressbook/create
+curl -d '{"name": "Google"}' -H "Content-Type: application/json" -H  "Authorization: abc123" -X POST http://localhost:8080/v1/api/pwc/addressbook/create
+curl -d '{"name": "Yahoo"}' -H "Content-Type: application/json" -H  "Authorization: abc123" -X POST http://localhost:8080/v1/api/pwc/addressbook/create
 ```
 
 * Run the following command to view address books you created
@@ -77,7 +77,7 @@ curl -d '{"name": "Yahoo"}' -H "Content-Type: application/json" -X POST http://l
  	* key=Authorization value=abc123
 
 ```
-curl -H "Content-Type: application/json" -X POST http://localhost:8080/v1/pwc/api/addressbook
+curl -H "Content-Type: application/json" -H  "Authorization: abc123" -X POST http://localhost:8080/v1/pwc/api/addressbook
 ```
 
 * Run the following endpoint create a contact. Remember to update the addressbook id to the id of an addressbook created in previous step.
@@ -87,11 +87,11 @@ curl -H "Content-Type: application/json" -X POST http://localhost:8080/v1/pwc/ap
  	* key=Authorization value=abc123
 
 ```
-curl -d '{"addressBookId" : "1", ""contactName": "Jagdeep1", "contactPhoneNumber" : "0424144966"}' -H "Content-Type: application/json" -X POST http://localhost:8080/v1/pwc/api/contact/create
-curl -d '{"addressBookId" : "2", ""contactName": "Jagdeep1", "contactPhoneNumber" : "0424144967"}' -H "Content-Type: application/json" -X POST http://localhost:8080/v1/pwc/api/contact/create
-curl -d '{"addressBookId" : "3", ""contactName": "Jagdeep1", "contactPhoneNumber" : "0424144968"}' -H "Content-Type: application/json" -X POST http://localhost:8080/v1/pwc/api/contact/create
-curl -d '{"addressBookId" : "1", ""contactName": "Jagdeep2", "contactPhoneNumber" : "0424144969"}' -H "Content-Type: application/json" -X POST http://localhost:8080/v1/pwc/api/contact/create
-curl -d '{"addressBookId" : "2", ""contactName": "Jagdeep3", "contactPhoneNumber" : "0424144970"}' -H "Content-Type: application/json" -X POST http://localhost:8080/v1/pwc/api/contact/create
+curl -d '{"addressBookId" : "1", ""contactName": "Jagdeep1", "contactPhoneNumber" : "0424144966"}' -H "Content-Type: application/json" -H  "Authorization: abc123" -X POST http://localhost:8080/v1/pwc/api/contact/create
+curl -d '{"addressBookId" : "2", ""contactName": "Jagdeep1", "contactPhoneNumber" : "0424144967"}' -H "Content-Type: application/json" -H  "Authorization: abc123" -X POST http://localhost:8080/v1/pwc/api/contact/create
+curl -d '{"addressBookId" : "3", ""contactName": "Jagdeep1", "contactPhoneNumber" : "0424144968"}' -H "Content-Type: application/json" -H  "Authorization: abc123" -X POST http://localhost:8080/v1/pwc/api/contact/create
+curl -d '{"addressBookId" : "1", ""contactName": "Jagdeep2", "contactPhoneNumber" : "0424144969"}' -H "Content-Type: application/json" -H  "Authorization: abc123" -X POST http://localhost:8080/v1/pwc/api/contact/create
+curl -d '{"addressBookId" : "2", ""contactName": "Jagdeep3", "contactPhoneNumber" : "0424144970"}' -H "Content-Type: application/json" -H  "Authorization: abc123" -X POST http://localhost:8080/v1/pwc/api/contact/create
 ```
 
 * Run the following endpoint to get Unique contacts in all address books
