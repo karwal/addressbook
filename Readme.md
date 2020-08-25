@@ -62,20 +62,23 @@ This will create a folder addressbook in your current working directory.
 	* add following two http headers:
 	* key=Authorization value=abc123
 	* key=Content-Type  value=application/json
-	
-```curl -d '{"name": "Outlook"}' -H "Content-Type: application/json" -X POST http://localhost:8080/vi/api/pwc/addressbook/create
-curl -d '{"name": "Google"}' -H "Content-Type: application/json" -X POST http://localhost:8080/vi/api/pwc/addressbook/create
-curl -d '{"name": "Yahoo"}' -H "Content-Type: application/json" -X POST http://localhost:8080/vi/api/pwc/addressbook/create```
 
+
+```
+curl -d '{"name": "Outlook"}' -H "Content-Type: application/json" -X POST http://localhost:8080/vi/api/pwc/addressbook/create
+curl -d '{"name": "Google"}' -H "Content-Type: application/json" -X POST http://localhost:8080/vi/api/pwc/addressbook/create
+curl -d '{"name": "Yahoo"}' -H "Content-Type: application/json" -X POST http://localhost:8080/vi/api/pwc/addressbook/create
+```
 
 * Run the following command to view address books you created
 	* endpoint URL: http://localhost:8080/vi/pwc/api/addressbook
 	* http method=GET
 	* add following http header:
  	* key=Authorization value=abc123
-	
-```curl -H "Content-Type: application/json" -X POST http://localhost:8080/vi/pwc/api/addressbook```
 
+```
+curl -H "Content-Type: application/json" -X POST http://localhost:8080/vi/pwc/api/addressbook
+```
 
 * Run the following endpoint create a contact. Remember to update the addressbook id to the id of an addressbook created in previous step.
 	* endpoint URL: http://localhost:8080/vi/pwc/api/contact/create
