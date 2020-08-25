@@ -48,15 +48,11 @@ Project structure was generated using Spring Initializr. React has been used for
 
 **Note** My primary skillset lies around backend services. Though I have done some frontend development using Google GWT and Adobe Flex in the past, but I am not upto date with modern front end technologies like React/Angular etc. The React used in this project is what I learned and applied in two days. I have created a front end for the sake com completeness.
 
-* Database is available at:
-
-http://localhost:8080/h2_console
-
-Username: sa
-
-Password: <empty>
-
-Database: ./h2/addressbookdb
+- Database is available at:
+	- http://localhost:8080/h2_console
+	- Username: sa
+	- Password: <empty>
+	- Database: ./h2/addressbookdb
 
 
 # Using application
@@ -113,4 +109,4 @@ There is no JUnit coverage for repository class methods as repository is just an
 
 
 ## Author
-* **Jagdeep Singh **
+* **Jagdeep Singh**
