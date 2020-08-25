@@ -19,7 +19,7 @@ public class RestExceptionHandler extends ResponseEntityExceptionHandler {
 
     @ExceptionHandler(EntityAlreadyExists.class)
     protected ResponseEntity<ApiError> handleEntityNotFound(EntityAlreadyExists ex) {
-        logger.log(Level.WARNING, ex.getMessage());
+        logger.info(ex.getMessage());
         return new ResponseEntity<>(new ApiError(ex.getMessage()), HttpStatus.BAD_REQUEST);
     }
 }

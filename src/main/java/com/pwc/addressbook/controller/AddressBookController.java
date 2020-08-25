@@ -27,10 +27,9 @@ public class AddressBookController {
 
 	@RequestMapping(value = "/addressbook/create")
 	public ResponseEntity<AddressBook> create(@RequestBody AddressBook addressBook) throws EntityAlreadyExists {
-		logger.info("Creating address book request" );
 		List<AddressBook>  addressBookListFromDb = addressBookRepository.findAddressBookByName(addressBook.getName());
 		if(addressBookListFromDb.size() > 0) {
-			logger.warning("Address book already exists" + addressBook.toString());
+			logger.info("Address book already exists" + addressBook.toString());
 			throw new EntityAlreadyExists(String.format("Address book %s already exists", addressBook.getName()));
 		}
 		logger.info("Creating address book" + addressBook.toString());

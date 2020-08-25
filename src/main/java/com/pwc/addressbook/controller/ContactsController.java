@@ -27,15 +27,13 @@ public class ContactsController {
 
     @RequestMapping(value = "/contact/create")
     public ResponseEntity<Contact> create(@RequestBody Contact contact) throws EntityAlreadyExists {
-        logger.info("Creating contact :" + contact.toString());
 
         List<Contact> contactListFromDb = contactRepository.findContactByNameAndAddressBook(contact.getContactName(), contact.getAddressBookId());
         if (contactListFromDb.size() > 0) {
-            logger.warning("Contact already exists" + contact.getContactName() + " for this address book");
+            logger.info("Contact already exists" + contact.getContactName() + " for this address book");
             throw new EntityAlreadyExists(String.format("Contact %s already exists", contact.getContactName()));
-        } else {
-            logger.warning("Contact not found " + contact.getContactName());
         }
+        logger.info("Creating contact :" + contact.toString());
 
         Contact savedContact = contactRepository.save(contact);
         return new ResponseEntity<Contact>(savedContact, HttpStatus.OK);
