@@ -31,8 +31,8 @@ Project structure was generated using Spring Initializr. React has been used for
 * Clone the git repo using following command
 
 ```git clone https://github.com/karwal/addressbook.git```
-	
-   This will create a folder addressbook in your current working directory.
+
+This will create a folder addressbook in your current working directory.
 * Execute command:
 
 ``` cd addressbook ```
@@ -57,27 +57,27 @@ Project structure was generated using Spring Initializr. React has been used for
 
 # Using application
 * Create few Address Book using any Rest client (I have used Postman/Curl)
-* endpoint URL: http://localhost:8080/vi/api/pwc/addressbook/create
-* http method= POST
+	* endpoint URL: http://localhost:8080/vi/api/pwc/addressbook/create
+	* http method= POST
 	* add following two http headers:
- 		* key=Authorization value=abc123
- 		* key=Content-Type  value=application/json
+	* key=Authorization value=abc123
+	* key=Content-Type  value=application/json
 ```curl -d '{"name": "Outlook"}' -H "Content-Type: application/json" -X POST http://localhost:8080/vi/api/pwc/addressbook/create```
 ```curl -d '{"name": "Google"}' -H "Content-Type: application/json" -X POST http://localhost:8080/vi/api/pwc/addressbook/create```
 ```curl -d '{"name": "Yahoo"}' -H "Content-Type: application/json" -X POST http://localhost:8080/vi/api/pwc/addressbook/create```
 
 
 * Run the following command to view address books you created
-
-* endpoint URL: http://localhost:8080/vi/pwc/api/addressbook
+	* endpoint URL: http://localhost:8080/vi/pwc/api/addressbook
 	* http method=GET
 	* add following http header:
  	* key=Authorization value=abc123
+	
 ```curl -H "Content-Type: application/json" -X POST http://localhost:8080/vi/pwc/api/addressbook```
 
 
 * Run the following endpoint create a contact. Remember to update the addressbook id to the id of an addressbook created in previous step.
-* endpoint URL: http://localhost:8080/vi/pwc/api/contact/create
+	* endpoint URL: http://localhost:8080/vi/pwc/api/contact/create
 	* http method=GET
 	* add following http header:
  	* key=Authorization value=abc123
@@ -91,10 +91,11 @@ curl -d '{"addressBookId" : "2", ""contactName": "Jagdeep3", "contactPhoneNumber
 ```
 
 * Run the following endpoint to get Unique contacts in all address books
-* endpoint URL: http://localhost:8080/v1/api/pwc/contact?unique=true
+	* endpoint URL: http://localhost:8080/v1/api/pwc/contact?unique=true
 	* http method=GET
 	* add following http header:
  	* key=Authorization value=abc123
+	
 ```
 curl  -H "Content-Type: application/json" -H  "Authorization: abc123"   -X GET http://localhost:8080/v1/api/pwc/contact?unique=true
 ```
