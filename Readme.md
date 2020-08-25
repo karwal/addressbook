@@ -52,7 +52,7 @@ This will create a folder addressbook in your current working directory.
 	- http://localhost:8080/h2_console
 	- Username: sa
 	- Password: <empty>
-	- Database: ./h2/addressbookdb
+	- Database: ./h2/addressbookdb (JDBC Url = jdbc:h2:~/h2/addressbookdb)
 
 
 # Using application
