@@ -24,4 +24,8 @@ public interface ContactRepository extends JpaRepository<Contact, Long> {
 
     @Query(value = "SELECT c FROM Contact c where c.contactName = :contactName")
     List<Contact> findContactByName(String contactName);
+
+    @Query(value = "SELECT c FROM Contact c where c.contactName = :contactName and c.addressBookId = :addressBookId")
+    List<Contact>     findContactByNameAndAddressBook(String contactName, Long addressBookId);
+
 }

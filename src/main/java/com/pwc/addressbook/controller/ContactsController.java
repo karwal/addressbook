@@ -1,5 +1,6 @@
-package com.pwc.addressbook;
+package com.pwc.addressbook.controller;
 
+import com.pwc.addressbook.controller.exception.EntityAlreadyExists;
 import com.pwc.addressbook.dao.ContactRepository;
 import com.pwc.addressbook.model.AggregateResults;
 import com.pwc.addressbook.model.Contact;
@@ -28,9 +29,9 @@ public class ContactsController {
     public ResponseEntity<Contact> create(@RequestBody Contact contact) throws EntityAlreadyExists {
         logger.info("Creating contact :" + contact.toString());
 
-        List<Contact> contactListFromDb = contactRepository.findContactByName(contact.getContactName());
+        List<Contact> contactListFromDb = contactRepository.findContactByNameAndAddressBook(contact.getContactName(), contact.getAddressBookId());
         if (contactListFromDb.size() > 0) {
-            logger.warning("Contact already exists" + contact.getContactName());
+            logger.warning("Contact already exists" + contact.getContactName() + " for this address book");
             throw new EntityAlreadyExists(String.format("Contact %s already exists", contact.getContactName()));
         } else {
             logger.warning("Contact not found " + contact.getContactName());

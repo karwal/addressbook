@@ -1,4 +1,4 @@
-package com.pwc.addressbook;
+package com.pwc.addressbook.controller.exception;
 
 public class ApiError {
     String message;

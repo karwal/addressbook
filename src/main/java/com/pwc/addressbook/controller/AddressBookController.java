@@ -1,19 +1,17 @@
-package com.pwc.addressbook;
+package com.pwc.addressbook.controller;
 
+import com.pwc.addressbook.controller.exception.EntityAlreadyExists;
 import com.pwc.addressbook.dao.AddressBookRepository;
 import com.pwc.addressbook.model.AddressBook;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
-import java.util.logging.Level;
 import java.util.logging.Logger;
-import java.util.Map;
 
 /**
  * @author Jagdeep Singh

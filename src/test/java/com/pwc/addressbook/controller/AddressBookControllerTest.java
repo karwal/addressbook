@@ -1,7 +1,8 @@
-package com.pwc.addressbook;
+package com.pwc.addressbook.controller;
 
 
 
+import com.pwc.addressbook.controller.exception.EntityAlreadyExists;
 import com.pwc.addressbook.dao.AddressBookRepository;
 import com.pwc.addressbook.model.AddressBook;
 import org.junit.Assert;

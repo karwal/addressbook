@@ -1,4 +1,4 @@
-package com.pwc.addressbook;
+package com.pwc.addressbook.controller.exception;
 
 public class EntityAlreadyExists extends Exception {
 

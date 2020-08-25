@@ -1,4 +1,4 @@
-package com.pwc.addressbook;
+package com.pwc.addressbook.controller.exception;
 
 import org.springframework.core.Ordered;
 import org.springframework.core.annotation.Order;
@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 
-import javax.persistence.EntityNotFoundException;
 import java.util.logging.Logger;
 import java.util.logging.Level;
 
