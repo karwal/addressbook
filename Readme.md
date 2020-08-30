@@ -1,7 +1,8 @@
 # PWC Address Book
 
 # Design / Architecture
-I have chosen Spring Boot to create this application. The reason for choosing Spring Boot is its convention over configuration approach and ability to create standalone applications. 
+I have chosen Spring Boot to create this application. The reason for choosing Spring Boot is its convention over configuration approach and ability to create standalone applications. The frontend has been designed in React.
+
 Project structure was generated using Spring Initializr. React has been used for front end.
 
 # Tech-Stack Used to build application:
